@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @CreateTime:  2018/2/27 10:54 
 # @CreateBy:    Alvin
-# @File:        parser.py
+# @File:        myparser.py
 # @UpdateTime:
 # @UpdateBy:
 
@@ -24,6 +24,6 @@ class Parser(object):
     def unique(self):
         new = []
         for x in self.temp:
-            if x not in new:
-                new.append(x)
+            # if x not in new:
+            new.append(x)
         return new
