@@ -6,7 +6,7 @@ Automatic detection of security holes
 2. get the secondary hostname name and ip
 3. get the server fingerprint
 4. search keyword of fingerprint in holes databases
-5. output report(html/xml/email/wechat/)
+5. output report(html/xml/email)
 
 ## todo list
 1. hostname collection, doing

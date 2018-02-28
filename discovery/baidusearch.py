@@ -17,7 +17,6 @@ class SearchBaidu(object):
         self.word = word
         self.total_results = ""
         self.server = "http://www.baidu.com/s"
-        self.hostname = "www.baidu.com"
         self.limit = limit
         self.counter = 0
 
