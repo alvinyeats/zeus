@@ -23,6 +23,7 @@ class HtmlExport(object):
             f.write(output)
 
 
+# test
 if __name__ == "__main__":
     hts = ['qq.com', 'www.qq.com', 'im.qq.com', 'test.qq.com']
     HtmlExport(hts, 'output.html').write_html()
