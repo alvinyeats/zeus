@@ -21,7 +21,7 @@ class SearchBaidu(object):
         self.counter = 0
 
     def do_search(self):
-        payload = {'wd': self.word, 'pn': self.counter}
+        payload = {'wd': '@'+self.word, 'pn': self.counter}
         r = requests.get(self.server, params=payload)
         self.total_results += r.text
 
