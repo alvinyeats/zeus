@@ -5,6 +5,7 @@
 # @UpdateTime:
 # @UpdateBy:
 
+import os
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -15,7 +16,9 @@ class HtmlExport(object):
         self.filename = filename
 
     def write_html(self):
-        env = Environment(loader=FileSystemLoader('templates'))
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        tem_dir = os.path.join(base_dir, 'templates')
+        env = Environment(loader=FileSystemLoader(tem_dir))
         output_template = env.get_template('export.html')
         output = output_template.render(hostnames=self.hostnames)
 
@@ -27,4 +30,3 @@ class HtmlExport(object):
 if __name__ == "__main__":
     hts = ['qq.com', 'www.qq.com', 'im.qq.com', 'test.qq.com']
     HtmlExport(hts, 'output.html').write_html()
-

@@ -15,7 +15,15 @@ Automatic detection of security holes
 - VulSpider: 漏洞爬虫模块，爬虫cve,nvd,cnnvd等各大漏洞资讯站点，持续更新漏洞库
 - Fuzzing: 自动攻击模块，利用识别到的指纹与漏洞库进行比对，汇总出存在弱点的目标信息（hostname，ip，服务器应用名称及版本，对应的漏洞编号及poc ）
 
+## User Guide
 
+```git
+git clone https://github.com/alvinyeats/Zeus.git
+cd Zeus
+pip install -r requirements.txt
+python Zeus.py -h
+
+```
 
 ## todo list
 1. hostname collection, doing

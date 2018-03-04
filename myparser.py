@@ -24,6 +24,6 @@ class Parser(object):
     def unique(self):
         new = []
         for x in self.temp:
-            # if x not in new:
-            new.append(x)
+            if x not in new:
+                new.append(x)
         return new
