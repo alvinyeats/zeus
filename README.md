@@ -1,6 +1,12 @@
 # Zeus
 Automatic detection of security holes
 
+ ____  ___  __  _______
+/_  / / _ \/ / / / ___/
+ / /_/  __/ /_/ (__  )
+/___/\___/\__,_/____/
+
+
 ## How to work
 1. input hostname
 2. get the secondary hostname name and ip

@@ -13,6 +13,13 @@ from discovery import *
 from lib import htmlexport
 from lib import hostchecker
 
+print "\n***************************"
+print "*  ____  ___  __  _______ *"
+print "* /_  / / _ \/ / / / ___/ *"
+print "*  / /_/  __/ /_/ (__  )  *"
+print "* /___/\___/\__,_/____/   *"
+print "***************************\n\n"
+
 
 def usage():
     comm = os.path.basename(sys.argv[0])
