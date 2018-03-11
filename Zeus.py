@@ -11,6 +11,7 @@ import traceback
 
 from discovery import *
 from lib import htmlexport
+from lib import hostchecker
 
 
 def usage():
@@ -40,6 +41,7 @@ def start(argv):
     filename = ""
     limit = 100
     all_hosts = []
+    full = []
     for opt, arg in opts:
         if opt == '-l':
             limit = int(arg)
@@ -67,17 +69,18 @@ def start(argv):
     if not all_hosts:
         print "No hosts found"
     else:
-        for host in all_hosts:
+        all_hosts = sorted(set(all_hosts))
+        print "[-] Resolving hostnames IPs... "
+        full_host = hostchecker.Checker(all_hosts)
+        full = full_host.check()
+        for host in full:
             print host
-        # todo get ip from hostname
-        # print "[-] Resolving hostnames IPs... "
 
     # ************* Reporting ******************
     if filename != "":
         try:
             print "\n[+] Saving files..."
-            html = htmlexport.HtmlExport(
-                all_hosts, filename)
+            html = htmlexport.HtmlExport(word, full, filename)
             html.write_html()
         except:
             print traceback.print_exc()
