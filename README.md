@@ -1,7 +1,7 @@
 # Zeus
 Automatic detection of security holes
 
-```c
+```html
 ***************************
 *  ____  ___  __  _______ *
 * /_  / / _ \/ / / / ___/ *
