@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# @CreateTime:  2018/3/13 18:24 
+# @CreateTime:  2018/3/14 9:41 
 # @CreateBy:    Alvin
-# @File:        bingsearch.py
+# @File:        googlesearch.py.py
 # @UpdateTime:
 # @UpdateBy:
 
@@ -12,7 +12,7 @@ import myparser
 
 
 # todo: need test, unconfirmed
-class SearchBing(object):
+class SearchGoogle(object):
 
     def __init__(self, word, limit):
         self.word = word
@@ -22,7 +22,7 @@ class SearchBing(object):
         self.counter = 0
 
     def do_search(self):
-        payload = {'q': '@'+self.word, 'count': 50, 'first': self.counter}
+        payload = {'q': '@'+self.word, 'num': 100, 'start': self.counter}
         r = requests.get(self.server, params=payload)
         self.total_results += r.text
 
@@ -37,5 +37,6 @@ class SearchBing(object):
     def get_hostnames(self):
         raw_res = myparser.Parser(self.total_results, self.word)
         return raw_res.hostnames()
+
 
 
