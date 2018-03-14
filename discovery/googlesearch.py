@@ -17,12 +17,12 @@ class SearchGoogle(object):
     def __init__(self, word, limit):
         self.word = word
         self.total_results = ""
-        self.server = "http://www.bing.com/search"
+        self.server = "http://www.google.com/search"
         self.limit = limit
         self.counter = 0
 
     def do_search(self):
-        payload = {'q': '@'+self.word, 'num': 100, 'start': self.counter}
+        payload = {'q': '@'+self.word, 'start': self.counter, 'num': 100, 'hl': 'en'}
         r = requests.get(self.server, params=payload)
         self.total_results += r.text
 

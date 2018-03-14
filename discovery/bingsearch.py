@@ -11,7 +11,6 @@ import time
 import myparser
 
 
-# todo: need test, unconfirmed
 class SearchBing(object):
 
     def __init__(self, word, limit):
