@@ -1,4 +1,7 @@
 # Zeus
+
+![](https://img.shields.io/badge/python-2.7-blue.svg)
+
 Automatic detection of security holes
 
 ```html
@@ -9,6 +12,7 @@ Automatic detection of security holes
 * /___/\___/\__,_/____/   *
 ***************************
 ```
+
 
 ## How to work
 1. input hostname
