@@ -31,7 +31,7 @@ class SearchGoogle(object):
             self.do_search()
             time.sleep(1)
 
-            print "\tSearching " + str(self.counter) + " results..."
+            print("\tSearching " + str(self.counter) + " results...")
             self.counter += 10
 
     def get_hostnames(self):

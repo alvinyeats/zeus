@@ -17,7 +17,7 @@ class TestGoogleSearch(unittest.TestCase):
         search = googlesearch.SearchGoogle(word, limit)
         search.process()
         all_hosts = search.get_hostnames()
-        print all_hosts
+        print(all_hosts)
 
 
 if __name__ == "__main__":

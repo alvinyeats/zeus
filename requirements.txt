@@ -1,2 +1,2 @@
-requests==2.13.0
-Jinja2==2.10
+requests
+Jinja2
