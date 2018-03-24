@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @CreateTime:  2018/2/28 14:39 
+# @CreateTime:  2018/2/28 14:39
 # @CreateBy:    Alvin
 # @File:        htmlexport.py
 # @UpdateTime:
@@ -23,7 +23,7 @@ class HtmlExport(object):
         output_template = env.get_template('export.html')
         output = output_template.render(domain=self.domain, hosts=self.hosts)
 
-        with open(self.filename, "wb") as f:
+        with open(self.filename, "w") as f:
             f.write(output)
 
 

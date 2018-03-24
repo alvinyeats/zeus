@@ -7,3 +7,6 @@ __pycache__
 
 #2to3
 *.bak
+
+#output
+*.html
