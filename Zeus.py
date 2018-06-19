@@ -56,9 +56,9 @@ def start(argv):
             word = arg
         elif opt == '-b':
             engine = arg
-            if engine not in ("baidu",):
+            if engine not in ("baidu", "bing"):
                 usage()
-                print "Invalid search engine, try with: baidu, waiting to add ..."
+                print "Invalid search engine, try with: baidu/bing, other waiting to add ..."
                 sys.exit()
             else:
                 pass
@@ -67,6 +67,11 @@ def start(argv):
     if engine == "baidu":
         print "[-] Searching in Baidu:"
         search = baidusearch.SearchBaidu(word, limit)
+        search.process()
+        all_hosts = search.get_hostnames()
+    elif engine == "bing":
+        print "[-] Searching in Bing:"
+        search = bingsearch.SearchBing(word, limit)
         search.process()
         all_hosts = search.get_hostnames()
 
