@@ -8,5 +8,6 @@
 __all__ = [
     "baidusearch",
     "bingsearch",
+    "googlesearch",
 ]
 

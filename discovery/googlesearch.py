@@ -22,7 +22,7 @@ class SearchGoogle(object):
         self.counter = 0
 
     def do_search(self):
-        payload = {'q': '@'+self.word, 'start': self.counter, 'num': 100, 'hl': 'en'}
+        payload = {'q': '@'+self.word, 'start': self.counter, 'num': 10, 'hl': 'en'}
         r = requests.get(self.server, params=payload)
         self.total_results += r.text
 
