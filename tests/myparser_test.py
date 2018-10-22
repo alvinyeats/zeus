@@ -16,7 +16,7 @@ class TestParser(unittest.TestCase):
         results = "@chuangshi.qq.com****test.im.qq.com**fskfhqefm,nfuq!@#$!^#$^&mail.qq.com"
         p = myparser.Parser(results, word)
         hostnames = sorted(p.hostnames())
-        print hostnames
+        print(hostnames)
         self.assertEqual(hostnames, ['chuangshi.qq.com', 'mail.qq.com', 'test.im.qq.com'])
 
 if __name__ == '__main__':

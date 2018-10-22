@@ -17,7 +17,7 @@ class TestBingSearch(unittest.TestCase):
         search = bingsearch.SearchBing(word, limit)
         search.process()
         all_hosts = search.get_hostnames()
-        print all_hosts
+        print(all_hosts)
 
 
 if __name__ == "__main__":

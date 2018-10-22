@@ -22,4 +22,4 @@ class Checker(object):
 if __name__ == "__main__":
     full_host = Checker(['www.qq.com', 'mail.qq.com'])
     full = full_host.check()
-    print full
+    print(full)
