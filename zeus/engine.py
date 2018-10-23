@@ -1,15 +1,13 @@
 # -*- coding: UTF-8 -*-
 
 """
-    zeus
+    engine
     ~~~
 
-    Implements cobra main
+    Implements scan engine
 
     :author:    Alvin <alvinyeats@gmail.com>
     :homepage:  https://github.com/alvinyeats/zeus
     :license:   MIT, see LICENSE for more details.
     :copyright: Copyright (c) 2018 Alvin. All rights reserved
 """
-
-from .target import Target

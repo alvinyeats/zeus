@@ -1,15 +1,19 @@
 # -*- coding: UTF-8 -*-
 
 """
-    zeus
+    test_target
     ~~~
-
-    Implements cobra main
-
     :author:    Alvin <alvinyeats@gmail.com>
     :homepage:  https://github.com/alvinyeats/zeus
     :license:   MIT, see LICENSE for more details.
     :copyright: Copyright (c) 2018 Alvin. All rights reserved
 """
 
-from .target import Target
+import pytest
+
+
+from zeus import Target
+
+
+def test_target_add():
+    pass

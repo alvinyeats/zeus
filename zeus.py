@@ -12,12 +12,15 @@ def start():
     try:
         parser = argparse.ArgumentParser(description="zeus args parser")
 
-        parser_group_collect = parser.add_argument_group("Collect")
-        parser_group_collect.add_argument("-d", "--domain", dest="domain", help="Domain to search or company name")
-        parser_group_collect.add_argument("-if", "--inputfile", dest="inputfile", help="input file that has an domain/company list")
+        parser_group_target = parser.add_argument_group("Target Specification")
+        parser_group_target.add_argument("-d", dest="domain", help="Domain to search or company name")
+        parser_group_target.add_argument("-iF", dest="inputfile", help="input file that has an domain/company list")
+
+        parser_group_domain = parser.add_argument_group("Subdomain Dciscovery")
+        parser_group_domain.add_argument("-b", dest="domain", help="Domain to search or company name")
+        parser_group_domain.add_argument("-iF", dest="inputfile", help="input file that has an domain/company list")
 
         args = parser.parse_args()
-        print(args)
 
     except Exception as e:
         print(e)
