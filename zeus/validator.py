@@ -1,19 +1,24 @@
 # -*- coding: UTF-8 -*-
 
 """
-    test_target
+    target
     ~~~
+
+    Domain target parser and management
+
     :author:    Alvin <alvinyeats@gmail.com>
     :homepage:  https://github.com/alvinyeats/zeus
     :license:   MIT, see LICENSE for more details.
     :copyright: Copyright (c) 2018 Alvin. All rights reserved
 """
 
-import pytest
+import socket
 
 
-from zeus import Target
-
-
-def test_target_add():
-    pass
+def is_host(target):
+    target = target.strip()
+    try:
+        socket.gethostbyname(target)
+        return True
+    except socket.gaierror:
+        return False

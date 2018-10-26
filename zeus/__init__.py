@@ -12,4 +12,4 @@
     :copyright: Copyright (c) 2018 Alvin. All rights reserved
 """
 
-from .target import Target
+from .validator import Target
