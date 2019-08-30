@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
 
 """
-    zeus
+    target
     ~~~
 
-    Implements cobra main
+    Domain target parser and management
 
     :author:    Alvin <alvinyeats@gmail.com>
     :homepage:  https://github.com/alvinyeats/zeus
@@ -12,4 +12,13 @@
     :copyright: Copyright (c) 2018 Alvin. All rights reserved
 """
 
-from .validator import Target
+import socket
+
+
+def is_host(target):
+    target = target.strip()
+    try:
+        socket.gethostbyname(target)
+        return True
+    except socket.gaierror:
+        return False

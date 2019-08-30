@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
 
 """
-    zeus
+    engine
     ~~~
 
-    Implements cobra main
+    Implements scan engine
 
     :author:    Alvin <alvinyeats@gmail.com>
     :homepage:  https://github.com/alvinyeats/zeus
@@ -12,4 +12,10 @@
     :copyright: Copyright (c) 2018 Alvin. All rights reserved
 """
 
-from .validator import Target
+import threading
+
+
+class SearchEngine(object):
+
+    def __init__(self, ):
+        pass
