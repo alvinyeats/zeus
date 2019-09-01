@@ -17,7 +17,7 @@ class SearchGoogle(object):
     def __init__(self, word, limit):
         self.word = word
         self.total_results = ""
-        self.server = "http://www.google.com/search"
+        self.server = "http://www.google.com/searchs"
         self.limit = limit
         self.counter = 0
 
