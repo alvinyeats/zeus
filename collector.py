@@ -1,21 +1,36 @@
+import re
+import time
+
 
 class Collector:
 
-    def __init__(self, engine, parser):
-        """
-        :param engine: searchs engine class
-        """
+    def __init__(self, engine, word):
+        self.page_limit = 100
         self.engine = engine()
-        self.parser = parser()
+        self.word = word
+        self.domains = []
+        self.emails = []
 
-    def search(self, word):
-        return self.engine.search(word)
+    def _extract_domains(self, html):
+        reg_hosts = re.compile('[a-zA-Z0-9.-]*\.' + self.word)
+        temp = reg_hosts.findall(html)
+        return list(set(temp))
 
-    def get_domain(self, word):
-        return self.parser.get_domain(word)
+    def process(self):
+        counter = 0
+        while counter <= self.page_limit:
+            html = self.engine.get_page(self.word, counter)
+            self.domains += self._extract_domains(html)
+            time.sleep(1)
 
-    def get_email(self, html):
-        return self.parser.get_email(html)
+            print("\tSearching " + str(counter) + " results...")
+            counter += 10
+
+    def get_domains(self):
+        return self.domains
+
+    def get_emails(self):
+        return self.emails
 
     def to_string(self):
         pass

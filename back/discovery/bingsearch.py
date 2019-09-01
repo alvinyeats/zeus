@@ -16,7 +16,7 @@ class SearchBing(object):
     def __init__(self, word, limit):
         self.word = word
         self.total_results = ""
-        self.server = "http://www.bing.com/searchs"
+        self.server = "http://www.bing.com/searches"
         self.limit = limit
         self.counter = 0
 

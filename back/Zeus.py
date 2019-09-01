@@ -25,7 +25,7 @@ def usage():
     comm = os.path.basename(sys.argv[0])
 
     print("Usage: Zeus options \n")
-    print("     -d: Domain to searchs or company name")
+    print("     -d: Domain to searches or company name")
     print("     -b: data source: baidu, bing, google, all\n")
     print("     -f: Save the results into an HTML")
     print("     -l: Limit the number of results to work with")
@@ -58,7 +58,7 @@ def start(argv):
             engine = arg
             if engine not in ("baidu", "bing", "google"):
                 usage()
-                print("Invalid searchs engine, try with: baidu/bing, other waiting to add ...")
+                print("Invalid searches engine, try with: baidu/bing, other waiting to add ...")
                 sys.exit()
             else:
                 pass
@@ -81,7 +81,7 @@ def start(argv):
         all_hosts = search.get_hostnames()
 
     # ************* Results ******************
-    print("\n[+] Hosts found in searchs engines:")
+    print("\n[+] Hosts found in searches engines:")
     print("------------------------------------")
     if not all_hosts:
         print("No hosts found")

@@ -16,12 +16,12 @@ def start():
         parser = argparse.ArgumentParser(description="zeus args parser")
 
         parser_group_target = parser.add_argument_group("Target Specification")
-        parser_group_target.add_argument("-d", dest="domain", nargs="+", help="Domain to searchs or company name")
+        parser_group_target.add_argument("-d", dest="domain", nargs="+", help="Domain to searches or company name")
         parser_group_target.add_argument("-if", dest="inputfile", nargs="?", help="input file that has an domain/company list")
 
         parser_group_domain = parser.add_argument_group("Subdomain Dciscovery")
         parser_group_domain.add_argument("-s", dest="searchengine", nargs="?", help="Search engine to use")
-        parser_group_domain.add_argument("-st", dest="searchs thread", nargs="?", help="Search thread")
+        parser_group_domain.add_argument("-st", dest="searches thread", nargs="?", help="Search thread")
 
         args = parser.parse_args()
         print(args)
@@ -35,7 +35,7 @@ def start():
                 for line in f.readlines():
                     target_queue.put(line.strip())
 
-        # start searchs sub domain
+        # start searches sub domain
         while not target_queue.empty():
             print(target_queue.get())
 
